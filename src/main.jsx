@@ -2,18 +2,18 @@ import React from 'react'
 import ReactDom from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
-import LoginPage from './pages/Login.jsx'
-import CobaCoba from './pages/coba.jsx'
 import './assets/css/font.css'
+import Home from './pages/Home.jsx'
+import LoginPages from './pages/login.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <CobaCoba />
+    element: <Home />
   },
   {
     path: "/login",
-    element: <LoginPage />
+    element: <LoginPages />
   }
 ]);
 

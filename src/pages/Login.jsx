@@ -1,4 +1,4 @@
-import LoginLayouts from "../layouts/LoginLayouts"
+import LoginLayouts from "../components/layouts/LoginLayouts"
 
 const LoginPages = () => {
     return(
