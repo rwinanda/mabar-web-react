@@ -5,6 +5,7 @@ import './index.css'
 import './assets/css/font.css'
 import Home from './pages/Home.jsx'
 import LoginPages from './pages/login.jsx'
+import { LoadingContextProvider } from './context/LoadingSkeletonContext.jsx'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,8 @@ const router = createBrowserRouter([
 
 ReactDom.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <LoadingContextProvider>
+      <RouterProvider router={router}/>
+    </LoadingContextProvider>
   </React.StrictMode>,
 )
