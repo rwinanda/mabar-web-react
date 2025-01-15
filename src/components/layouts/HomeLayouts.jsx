@@ -1,8 +1,5 @@
-// import Content from "../fragment/content/Content";
-import { useEffect } from "react";
 import Content from "../fragment/content/Content";
 import { NewSidebar } from "../fragment/newsidebar/sidebar";
-import Sidebar from "../fragment/sidebar/Sidebar";
 import { CookiesHandler } from "../../context/CookiesContext";
 
 const HomeLayouts = () => {
@@ -21,7 +18,6 @@ const HomeLayouts = () => {
           <img src={MabarLogo} alt="" className="w-20"/>
         </div>
       </nav> */}
-      {/* <Sidebar /> */}
       <NewSidebar />
       <Content />
     </div>
