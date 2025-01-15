@@ -23,7 +23,7 @@ const LoginLayouts = () => {
           </h3>
         </div>
         {/* <a href="https://staging-api-mabar.bism.app/api/v1/auth/discord">Login</a> */}
-        <Button onClick={loginFetch} img={DiscordLogo} clsImg="w-6 mr-2" text="Login with Discord" />
+        <Button onClick={loginFetch} img={DiscordLogo} className='w-6 mr-2'  text="Login with Discord" />
       </div>
     </div>
   );
