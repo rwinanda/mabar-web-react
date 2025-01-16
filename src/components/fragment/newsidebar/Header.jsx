@@ -1,7 +1,6 @@
 import { faSlidersH } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Logo from "../../../assets/assets";
-import { useContext } from "react";
 
 export const HeaderSidebar = (props) => {
     const {toggleSidebar} = props;

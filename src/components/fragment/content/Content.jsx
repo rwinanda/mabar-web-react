@@ -5,12 +5,14 @@ import { Loading } from "../../../context/LoadingSkeletonContext";
 
 const Content = () => {
 
-    const{isLoading} = useContext(Loading)
+  // Loading
+  const{isLoading} = useContext(Loading)
 
   return (
     <div className="flex-auto text-white">
       <div className="p-4 pt-8 w-full">
         <div className="overflow-auto">
+          {/* Table */}
           {isLoading ? <SkeletonTable />  : <TableContent />}
         </div>
       </div>
