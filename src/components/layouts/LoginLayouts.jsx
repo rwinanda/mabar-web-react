@@ -2,10 +2,21 @@ import Button from "../button";
 import DiscordLogo from "../../assets/images/icondiscord.svg";
 import MabarLogo from "../../assets/images/mabar-dev-logo.svg";
 import { loginFetch } from "../../services/auth.service";
+import { useState } from "react";
 
 const LoginLayouts = () => {
 
+  const [isBtnLoading, setIsBtnLoading ] = useState(false);
   // Login Handler
+  const handleLogin = async () => {
+    setIsBtnLoading(true);
+    try {
+      await loginFetch();
+    } catch (error) {
+      console.log("Login Failed", error);
+      setIsBtnLoading(false);
+    }
+  };
 
   return (
     <div className="flex flex-col justify-center min-h-screen w-full bg-[#111111]">
@@ -22,8 +33,7 @@ const LoginLayouts = () => {
             You need to Login
           </h3>
         </div>
-        {/* <a href="https://staging-api-mabar.bism.app/api/v1/auth/discord">Login</a> */}
-        <Button onClick={loginFetch} img={DiscordLogo} className='w-6 mr-2'  text="Login with Discord" />
+        <Button onClick={handleLogin} img={DiscordLogo} classButton='w-60' classImages='w-6 mr-2' text="Login with Discord" isBtnLoading={isBtnLoading} />
       </div>
     </div>
   );
